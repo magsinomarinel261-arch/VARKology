@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VARKology</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f4f6f9;
+    text-align: center;
+}
+
+header {
+    background: #2c3e50;
+    color: white;
+    padding: 20px;
+}
+
+h1 {
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 30px;
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    width: 250px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    background: #e8f0fe;
+}
+
+.icon {
+    font-size: 50px;
+}
+
+.section-content {
+    display: none;
+    margin: 30px;
+    padding: 20px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+a {
+    text-decoration: none;
+    color: #2980b9;
+}
+
+button {
+    padding: 10px 15px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 8px;
+    background: #2c3e50;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #34495e;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>VARKology</h1>
+    <p>Personalized Learning Platform Based on VARK Learning Styles</p>
+</header>
+
+<div class="container">
+    <div class="card" onclick="showSection('visual')">
+        <div class="icon">🎨</div>
+        <h3>Visual</h3>
+    </div>
+
+    <div class="card" onclick="showSection('auditory')">
+        <div class="icon">🎧</div>
+        <h3>Auditory</h3>
+    </div>
+
+    <div class="card" onclick="showSection('reading')">
+        <div class="icon">📚</div>
+        <h3>Reading/Writing</h3>
+    </div>
+
+    <div class="card" onclick="showSection('kinesthetic')">
+        <div class="icon">🧪</div>
+        <h3>Kinesthetic</h3>
+    </div>
+</div>
+
+<!-- VISUAL -->
+<div id="visual" class="section-content">
+    <h2>Visual Learning Resources (MELC-Aligned)</h2>
+    <ul>
+        <li><a href="https://www.youtube.com/" target="_blank">YouTube Educational Videos (Science, Math, English)</a></li>
+        <li><a href="https://www.khanacademy.org/" target="_blank">Khan Academy Visual Lessons</a></li>
+        <li><a href="https://www.canva.com/education/" target="_blank">Canva Infographic Creation</a></li>
+    </ul>
+
+    <h3>Interactive Activities</h3>
+    <ul>
+        <li>Create Mind Maps using Canva</li>
+        <li>Interactive Diagram Labeling Activities</li>
+        <li>Watch-Analyze-Reflect Video Tasks</li>
+    </ul>
+
+    <button onclick="hideSections()">Close</button>
+</div>
+
+<!-- AUDITORY -->
+<div id="auditory" class="section-content">
+    <h2>Auditory Learning Resources (MELC-Aligned)</h2>
+    <ul>
+        <li><a href="https://open.spotify.com/" target="_blank">Educational Podcasts</a></li>
+        <li><a href="https://www.bbc.co.uk/learningenglish/" target="_blank">BBC Learning English Audio Lessons</a></li>
+        <li><a href="https://www.storynory.com/" target="_blank">Audio Storytelling Resources</a></li>
+    </ul>
+
+    <h3>Interactive Activities</h3>
+    <ul>
+        <li>Podcast Reflection Journals</li>
+        <li>Voice Recording Presentations</li>
+        <li>Peer Discussion via Google Meet</li>
+    </ul>
+
+    <button onclick="hideSections()">Close</button>
+</div>
+
+<!-- READING/WRITING -->
+<div id="reading" class="section-content">
+    <h2>Reading/Writing Resources (MELC-Aligned)</h2>
+    <ul>
+        <li><a href="https://www.deped.gov.ph/k-to-12/about/k-to-12-basic-education-curriculum/" target="_blank">DepEd Curriculum Guides (MELCs)</a></li>
+        <li><a href="https://scholar.google.com/" target="_blank">Scholarly Articles</a></li>
+        <li><a href="https://www.gutenberg.org/" target="_blank">Project Gutenberg eBooks</a></li>
+    </ul>
+
+    <h3>Interactive Activities</h3>
+    <ul>
+        <li>Essay Writing Workshops</li>
+        <li>Online Quizzes via Google Forms</li>
+        <li>Reflective Learning Journals</li>
+    </ul>
+
+    <button onclick="hideSections()">Close</button>
+</div>
+
+<!-- KINESTHETIC -->
+<div id="kinesthetic" class="section-content">
+    <h2>Kinesthetic Learning Resources (MELC-Aligned)</h2>
+    <ul>
+        <li><a href="https://phet.colorado.edu/" target="_blank">PhET Interactive Simulations</a></li>
+        <li><a href="https://www.tinkercad.com/" target="_blank">Tinkercad STEM Projects</a></li>
+        <li><a href="https://scratch.mit.edu/" target="_blank">Scratch Coding Activities</a></li>
+    </ul>
+
+    <h3>Interactive Activities</h3>
+    <ul>
+        <li>Virtual Lab Experiments</li>
+        <li>Project-Based Learning Tasks</li>
+        <li>Simulation-Based Problem Solving</li>
+    </ul>
+
+    <button onclick="hideSections()">Close</button>
+</div>
+
+<script>
+function showSection(sectionId) {
+    hideSections();
+    document.getElementById(sectionId).style.display = "block";
+}
+
+function hideSections() {
+    let sections = document.querySelectorAll('.section-content');
+    sections.forEach(section => section.style.display = "none");
+}
+</script>
+
+</body>
+</html>
