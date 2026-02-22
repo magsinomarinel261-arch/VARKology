@@ -199,3 +199,51 @@ function hideSections() {
 
 </body>
 </html>
+<h2>Discover Your Learning Style</h2>
+<p>What do you prefer when learning?</p>
+
+<button onclick="showResult('Visual')">Watching diagrams/videos</button>
+<button onclick="showResult('Auditory')">Listening to discussions</button>
+<button onclick="showResult('Reading/Writing')">Reading and taking notes</button>
+<button onclick="showResult('Kinesthetic')">Hands-on activities</button>
+
+<p id="result"></p>
+
+<script>
+function showResult(style) {
+    document.getElementById("result").innerHTML =
+        "You are likely a " + style + " learner!";
+}
+</script>
+<nav style="background:#2c3e50; padding:10px;">
+    <a href="#" style="color:white; margin:10px;">Home</a>
+    <a href="#visual" style="color:white; margin:10px;">Visual</a>
+    <a href="#auditory" style="color:white; margin:10px;">Auditory</a>
+    <a href="#reading" style="color:white; margin:10px;">Reading/Writing</a>
+    <a href="#kinesthetic" style="color:white; margin:10px;">Kinesthetic</a>
+</nav>
+<h2>Submit Your Activity</h2>
+<iframe src="PASTE-YOUR-GOOGLE-FORM-LINK-HERE"
+width="100%" height="500"></iframe>
+.card {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+<button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+
+<script>
+function toggleDarkMode() {
+    document.body.classList.toggle("dark");
+}
+</script>
+
+<style>
+.dark {
+    background-color: #121212;
+    color: white;
+}
+</style>
