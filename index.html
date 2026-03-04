@@ -148,6 +148,130 @@ button:hover {
 
     <li><a href="https://www.youtube.com/results?search_query=DepEd+MELC+lessons" target="_blank">
         DepEd MELC-Based Lessons (YouTube Search)</a></li>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Media and Information Literacy - Visual Learning</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f4f6f9;
+        }
+        header {
+            background-color: #800000;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        section {
+            padding: 20px;
+            margin: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #800000;
+        }
+        .diagram {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .box {
+            display: inline-block;
+            padding: 15px;
+            margin: 10px;
+            border: 2px solid #800000;
+            border-radius: 8px;
+        }
+        iframe {
+            width: 100%;
+            height: 400px;
+            border-radius: 10px;
+        }
+        footer {
+            background: #800000;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Media and Information Literacy (MIL)</h1>
+    <p>Senior High School - Visual Learning Module</p>
+</header>
+
+<section>
+    <h2>📘 Lesson 1: What is Media and Information Literacy?</h2>
+    <p>
+        Media and Information Literacy (MIL) empowers individuals to access, analyze,
+        evaluate, and create media in different forms.
+    </p>
+</section>
+
+<section>
+    <h2>📊 Types of Media (Graph Representation)</h2>
+    <canvas id="mediaChart"></canvas>
+</section>
+
+<section>
+    <h2>🧠 Information Processing Diagram</h2>
+    <div class="diagram">
+        <div class="box">Source</div> ➜
+        <div class="box">Message</div> ➜
+        <div class="box">Medium</div> ➜
+        <div class="box">Audience</div> ➜
+        <div class="box">Feedback</div>
+    </div>
+</section>
+
+<section>
+    <h2>📑 Embedded PowerPoint Presentation</h2>
+    <!-- Replace the src link with your own PPT file (upload to Google Drive and embed) -->
+    <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSampleEmbedLink/embed?start=false&loop=false&delayms=3000" allowfullscreen="true"></iframe>
+</section>
+
+<section>
+    <h2>🔍 Evaluating Information Sources</h2>
+    <ul>
+        <li>Authority – Who is the author?</li>
+        <li>Accuracy – Is the information correct?</li>
+        <li>Objectivity – Is there bias?</li>
+        <li>Currency – Is it updated?</li>
+        <li>Coverage – Is it complete?</li>
+    </ul>
+</section>
+
+<footer>
+    <p>© 2026 Senior High School - Media and Information Literacy</p>
+</footer>
+
+<script>
+    var ctx = document.getElementById('mediaChart').getContext('2d');
+    var mediaChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['Print Media', 'Broadcast Media', 'Digital Media'],
+            datasets: [{
+                label: 'Usage Percentage',
+                data: [30, 25, 45],
+                backgroundColor: ['#800000', '#b03060', '#ff6666']
+            }]
+        },
+        options: {
+            responsive: true
+        }
+    });
+</script>
+
+</body>
+</html>
 </ul>
 <!-- AUDITORY -->
 <div id="auditory" class="section-content">
