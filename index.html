@@ -273,6 +273,138 @@ button:hover {
 </body>
 </html>
 </ul>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Media and Information Literacy - Visual Learning</title>
+
+<!-- Chart.js CDN -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        background-color: #f4f6f9;
+    }
+
+    header {
+        background-color: maroon;
+        color: white;
+        text-align: center;
+        padding: 20px;
+    }
+
+    section {
+        padding: 30px;
+        margin: 20px;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+        color: maroon;
+    }
+
+    iframe {
+        width: 100%;
+        height: 400px;
+        border-radius: 10px;
+    }
+
+    canvas {
+        max-width: 700px;
+        margin: auto;
+        display: block;
+    }
+
+    footer {
+        text-align: center;
+        padding: 15px;
+        background: maroon;
+        color: white;
+    }
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Media and Information Literacy (MIL)</h1>
+    <p>Senior High School Visual Learning Portal</p>
+</header>
+
+<section>
+    <h2>📊 Media Consumption Graph</h2>
+    <p>This graph shows common media platforms used by students.</p>
+    <canvas id="mediaChart"></canvas>
+</section>
+
+<section>
+    <h2>📽 PowerPoint Discussion</h2>
+    <p>Click the presentation below to view the MIL lesson slides.</p>
+
+    <!-- Replace link with your own Google Slides embed link -->
+    <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSampleEmbedLink/embed?start=false&loop=false&delayms=3000" allowfullscreen></iframe>
+</section>
+
+<section>
+    <h2>🎥 Video Discussion: What is Media and Information Literacy?</h2>
+
+    <!-- Replace with your preferred YouTube MIL video -->
+    <iframe src="https://www.youtube.com/embed/8I7uZxjXk5g" allowfullscreen></iframe>
+</section>
+
+<section>
+    <h2>📚 About the Subject</h2>
+    <p>
+        Media and Information Literacy (MIL) helps students develop critical thinking 
+        skills in analyzing media messages, identifying misinformation, and becoming 
+        responsible digital citizens. It focuses on understanding media platforms, 
+        evaluating information sources, and ethical media use.
+    </p>
+</section>
+
+<footer>
+    <p>© 2026 Media and Information Literacy | Senior High School</p>
+</footer>
+
+<script>
+const ctx = document.getElementById('mediaChart').getContext('2d');
+
+const mediaChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ['Social Media', 'Television', 'Online News', 'Radio', 'Print Media'],
+        datasets: [{
+            label: 'Student Usage (%)',
+            data: [85, 60, 75, 40, 30],
+            backgroundColor: [
+                '#800000',
+                '#b22222',
+                '#cd5c5c',
+                '#a52a2a',
+                '#8b0000'
+            ]
+        }]
+    },
+    options: {
+        responsive: true,
+        scales: {
+            y: {
+                beginAtZero: true,
+                max: 100
+            }
+        }
+    }
+});
+</script>
+
+</body>
+</html> 
 <!-- AUDITORY -->
 <div id="auditory" class="section-content">
     <h2>Auditory Learning Resources (MELC-Aligned)</h2>
